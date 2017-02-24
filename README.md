@@ -17,13 +17,11 @@ This is a boilerplate API used to test cloud hosting platforms (Azure, AWS, Goog
 There are two keys to success on Azure. The first is to include the following section when defining the port that your API will listen on. This is because Azure randomly decides which port to make your API listen on when building and running your app. Look inside main.go for the full server setup. The second is that all your go files must reside in root.
 
 ```go
-// Start server
-	ServicePort := "8080"
-	portConfig := os.Getenv("HTTP_PLATFORM_PORT")
-	if portConfig != "" {
-		ServicePort = portConfig
-	}
-  
+ServicePort := "8080"
+portConfig := os.Getenv("HTTP_PLATFORM_PORT")
+if portConfig != "" {
+	ServicePort = portConfig
+}
 ```
 
 Visit the following location to see the app in action:
