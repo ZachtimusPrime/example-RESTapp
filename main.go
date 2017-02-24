@@ -1,15 +1,13 @@
 package main
 
 import (
-	"log"
 	"net/http"
-	"os"
 
 	"github.com/gorilla/mux"
 )
 
 func init() {
-	http.HandleFunc("/", http.FileServer(http.Dir("./apidocs/")))
+	http.Handle("/", http.FileServer(http.Dir("./apidocs/")))
 }
 
 func main() {
