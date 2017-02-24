@@ -1,4 +1,4 @@
-# example-RESTapp
+# example-RESTapp in Google Cloud App Engine
 Repo for an simple boilerplate RESTful web API written in Go. This doesn't really do much.
 
 [![GoDoc](https://godoc.org/github.com/ZachtimusPrime/example-RESTapp?status.svg)](https://godoc.org/github.com/ZachtimusPrime/example-RESTapp)
