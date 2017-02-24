@@ -21,5 +21,5 @@ func main() {
 
 	router.HandleFunc("/hello", sayHelloHandler).Methods("GET")
 	router.HandleFunc("/hello", notImplementedHandler).Methods("POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS")
-	
+
 }
