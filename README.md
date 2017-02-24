@@ -18,7 +18,7 @@ go get "github.com/ZachtimusPrime/example-RESTapp"
 ```
 
 ## Usage ##
-
+This is a boilerplate API used to test cloud hosting platforms (Azure, AWS, Google Cloud).
 Go get && go build the project to run it locally on port 8080. Alternately, visit the following locations to see the app in action:
 
 [http://example-restapp.azurewebsites.net](http://example-restapp.azurewebsites.net)
