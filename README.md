@@ -8,8 +8,7 @@ Repo for an simple boilerplate RESTful web API written in Go. This doesn't reall
 
 ## Table of Contents ##
 
-* [Installation](#installation)
-* [Usage](#usage)
+* [Setup](#setup)
 
 
 ## Setup ##
