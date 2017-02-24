@@ -11,11 +11,6 @@ Repo for an simple boilerplate RESTful web API written in Go. This doesn't reall
 * [Installation](#installation)
 * [Usage](#usage)
 
-## Installation ##
-
-```bash
-go get "github.com/ZachtimusPrime/example-RESTapp"
-```
 
 ## Setup ##
 This is a boilerplate API used to test cloud hosting platforms (Azure, AWS, Google Cloud). 
