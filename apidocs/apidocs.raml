@@ -1,0 +1,42 @@
+#%RAML 0.8
+title: Example REST App
+version: v0
+mediaType: application/json
+protocols:
+  - HTTPS
+
+documentation:
+  - title: <h2>About this API</h2>
+    content: |
+      This is a boilerplate API used to test cloud hosting platforms (Azure, AWS, Google Cloud).
+      <p><b><h3>Functionality&colon;</h3></b>
+      <p>This doesn't really do much. But you can visit the running app at the following locations:<br>
+      <ul>
+        <li><a href="http://example-restapp.azurewebsites.net">http://example-restapp.azurewebsites.net</a></li>
+      </ul>
+      </p>
+      </p>
+
+/hello:
+  description: An endpoint with a greeting.
+  get:
+    description: Returns a friendly greeting.
+    responses:
+      200:
+        description: Get was successful; returns a greeting.
+        body:
+          application/json:
+            example: |
+              {
+                "message":"hello!"
+              }
+      500:
+        description: Server error.
+        body:
+          application/json:
+            schema: ErrorMsg
+            example: |
+              {
+                "error":"Internal server error."
+              }
+

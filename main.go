@@ -13,6 +13,8 @@ func main() {
 	router := mux.NewRouter().StrictSlash(false)
 
 	// Define routes, methods, and handlers
+	router.Path("/").Handler(http.FileServer(http.Dir("./apidocs/")))
+
 	router.HandleFunc("/hello", sayHelloHandler).Methods("GET")
 	router.HandleFunc("/hello", notImplementedHandler).Methods("POST","PUT","PATCH","DELETE","HEAD","OPTIONS")
 
