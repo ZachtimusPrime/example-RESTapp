@@ -8,6 +8,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
+func init() {
+	http.HandleFunc("/", http.FileServer(http.Dir("./apidocs/")))
+}
+
 func main() {
 	// Setup router mux
 	router := mux.NewRouter().StrictSlash(false)
@@ -17,13 +21,5 @@ func main() {
 
 	router.HandleFunc("/hello", sayHelloHandler).Methods("GET")
 	router.HandleFunc("/hello", notImplementedHandler).Methods("POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS")
-
-	// Start server
-	ServicePort := "8080"
-	portConfig := os.Getenv("HTTP_PLATFORM_PORT")
-	if portConfig != "" {
-		ServicePort = portConfig
-	}
-	log.Println("Starting server on port " + ServicePort)
-	http.ListenAndServe(":"+ServicePort, router)
+	
 }
